@@ -3,7 +3,7 @@ from pages.home_page import HomePage
 from pages.date_page import DatePage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestDatePage:
 
     @pytest.mark.date_next_month

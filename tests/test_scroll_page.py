@@ -3,7 +3,7 @@ from pages.home_page import HomePage
 from pages.scroll_page import ScrollPage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestScrollPage:
 
     @pytest.mark.scroll_to_button_16

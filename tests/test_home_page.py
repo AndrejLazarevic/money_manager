@@ -3,7 +3,7 @@ import pytest
 from pages.home_page import HomePage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestHomePage:
 
     @pytest.mark.long_click

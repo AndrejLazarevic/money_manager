@@ -5,7 +5,7 @@ from utilities.logger import log
 
 
 @pytest.fixture(scope='function')
-def beforeTest():
+def formDriver():
     driver = get_driver()
     DriverObject.set_driver(driver)
     log("Launching app")

@@ -3,7 +3,7 @@ from pages.enter_value_page import EnterValuePage
 from pages.home_page import HomePage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestEnterValuePage:
 
     @pytest.mark.one_test

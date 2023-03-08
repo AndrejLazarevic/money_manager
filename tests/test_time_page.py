@@ -3,7 +3,7 @@ from pages.home_page import HomePage
 from pages.time_page import TimePage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestTimePage:
 
     @pytest.mark.time_night

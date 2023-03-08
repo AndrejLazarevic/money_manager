@@ -3,7 +3,7 @@ from pages.home_page import HomePage
 from pages.tabs_page import TabsPage
 
 
-@pytest.mark.usefixtures("beforeTest")
+@pytest.mark.usefixtures("formDriver")
 class TestTabsPage:
 
     @pytest.mark.tabs_swipe

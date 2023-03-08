@@ -7,7 +7,7 @@ def get_driver():
         'appPackage': 'com.skill2lead.appiumdemo',
         'appActivity': 'com.skill2lead.appiumdemo.MainActivity',
         'automationName': 'UiAutomator2',
-        'platformVersion': '11',
+        'platformVersion': '12',
         'deviceName': 'Xiaomi Redmi 9',
         'app': '/Appium/test_app/apk/test_app.apk'
     }
