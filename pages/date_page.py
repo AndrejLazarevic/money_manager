@@ -6,10 +6,9 @@ from base.mobile_page import MobilePage
 
 class DatePage(MobilePage):
 
-    def __init__(self, locator_type=AppiumBy.ACCESSIBILITY_ID, locator_name='', page_name='Date Page'):
-        super().__init__(locator_type=locator_type, locator_name=locator_name, page_name=page_name)
-        driver = DriverObject.get_driver()
-        self.driver = driver
+    def __init__(self, page_name='Date Page'):
+        super().__init__(page_name=page_name)
+        self.driver = DriverObject.get_driver()
 
         self.date_header_year = MobileElement(AppiumBy.ACCESSIBILITY_ID, 'android:id/date_picker_header_year',
                                               'Header Year')

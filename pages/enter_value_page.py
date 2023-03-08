@@ -6,10 +6,9 @@ from base.mobile_page import MobilePage
 
 class EnterValuePage(MobilePage):
 
-    def __init__(self, locator_type=AppiumBy.ACCESSIBILITY_ID, locator_name='', page_name='Enter Some Value Page'):
-        super().__init__(locator_type=locator_type, locator_name=locator_name, page_name=page_name)
-        driver = DriverObject.get_driver()
-        self.driver = driver
+    def __init__(self, page_name='Enter Some Value Page'):
+        super().__init__(page_name=page_name)
+        self.driver = DriverObject.get_driver()
 
         self.input_enter_some_value = MobileElement(AppiumBy.ID, "com.skill2lead.appiumdemo:id/Et1", "Input")
         self.button_submit = MobileElement(AppiumBy.ID, "com.skill2lead.appiumdemo:id/Btn1", "Submit button")

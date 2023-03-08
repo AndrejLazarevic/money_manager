@@ -6,10 +6,9 @@ from base.mobile_page import MobilePage
 
 class TabsPage(MobilePage):
 
-    def __init__(self, locator_type=AppiumBy.ACCESSIBILITY_ID, locator_name='', page_name='Tabs Page'):
-        super().__init__(locator_type=locator_type, locator_name=locator_name, page_name=page_name)
-        driver = DriverObject.get_driver()
-        self.driver = driver
+    def __init__(self, page_name='Tabs Page'):
+        super().__init__(page_name=page_name)
+        self.driver = DriverObject.get_driver()
 
         self.navigation_bar_back_button = MobileElement(AppiumBy.ACCESSIBILITY_ID, "Navigate up", "Back Button")
         self.navigation_bar_title = MobileElement(AppiumBy.XPATH, '//android.widget.TextView[@text="Tab View"]',

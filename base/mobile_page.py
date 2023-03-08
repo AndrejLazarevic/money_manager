@@ -5,8 +5,7 @@ from utilities.logger import log
 class MobilePage:
 
     def __init__(self, locator_type=None, locator_name=None, page_name=None):
-        driver = DriverObject.get_driver()
-        self.driver = driver
+        self.driver = DriverObject.get_driver()
         self.locator_type = locator_type
         self.locator_name = locator_name
         self.page_name = page_name

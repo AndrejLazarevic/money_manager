@@ -6,10 +6,9 @@ from base.mobile_page import MobilePage
 
 class HomePage(MobilePage):
 
-    def __init__(self, locator_type=AppiumBy.ACCESSIBILITY_ID, locator_name='', page_name='Home Page'):
-        super().__init__(locator_type=locator_type, locator_name=locator_name, page_name=page_name)
-        driver = DriverObject.get_driver()
-        self.driver = driver
+    def __init__(self, page_name='Home Page'):
+        super().__init__(page_name=page_name)
+        self.driver = DriverObject.get_driver()
 
         self.button_enter_some_value = MobileElement(AppiumBy.ACCESSIBILITY_ID, "Btn1", "Enter Some Value Button")
         self.button_scroll_view = MobileElement(AppiumBy.ACCESSIBILITY_ID, 'Btn3', "Scroll View Button")

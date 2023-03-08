@@ -1,7 +1,7 @@
 from appium import webdriver
 
 
-def get_driver():
+def form_driver():
     desired_capabilities = {
         'platformName': 'Android',
         'appPackage': 'com.skill2lead.appiumdemo',

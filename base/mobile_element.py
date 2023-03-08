@@ -7,15 +7,14 @@ from utilities.logger import log
 
 
 class MobileElement:
+
     def __init__(self, locator_type, locator_name, element_name=None):
-        driver = DriverObject.get_driver()
-        self.driver = driver
+        self.driver = DriverObject.get_driver()
         self.locator_type = locator_type
         self.locator_name = locator_name
         self.element_name = element_name if element_name is not None else locator_name
 
     # Find and Wait
-
     def get_element(self):
         return self.driver.find_element(self.locator_type, self.locator_name)
 
@@ -28,7 +27,6 @@ class MobileElement:
         return element
 
     # Actions
-
     def click(self):
         element = self.get_element()
         element.click()
@@ -62,7 +60,6 @@ class MobileElement:
         log("Set value {0} to the {1}.".format(value, self.element_name))
 
     # Assertions
-
     def assert_visible(self):
         element = self.get_element()
         assert element.is_displayed() is True
