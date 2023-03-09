@@ -9,7 +9,7 @@ def form_driver():
         'automationName': 'UiAutomator2',
         'platformVersion': '12',
         'deviceName': 'Xiaomi Redmi 9',
-        'app': '/Appium/test_app/apk/test_app.apk'
+        'app': '/Appium/test_app/apk/money_manager.apk'
     }
 
     driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_capabilities)
