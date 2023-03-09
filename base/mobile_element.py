@@ -45,7 +45,11 @@ class MobileElement:
 
     def get_text(self):
         element = self.get_element()
-        text = str(element.text)
+        if element.text is None:
+            text = str(element.text)
+        else:
+            text = str(element.get_attribute('content-desc'))
+
         log("Getting text from {0}.".format(self.element_name))
         return text
 
@@ -101,3 +105,15 @@ class MobileElement:
         checked = element.get_attribute('checked')
         assert checked == 'false'
         log("Element {0} is not checked.".format(self.element_name))
+
+    def assert_enabled(self):
+        element = self.get_element()
+        enabled = element.get_attribute('enabled')
+        assert enabled == 'true'
+        log("Element {0} is enabled.".format(self.element_name))
+
+    def assert_not_enabled(self):
+        element = self.get_element()
+        enabled = element.get_attribute('enabled')
+        assert enabled == 'false'
+        log("Element {0} is not enabled.".format(self.element_name))
