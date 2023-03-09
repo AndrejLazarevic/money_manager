@@ -1,1 +1,1 @@
-Automation of a simple Android app using Appium and Python.
+Automation of a money manager Android app using Appium and Python.

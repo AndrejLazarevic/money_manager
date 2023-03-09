@@ -1,5 +1,4 @@
 from appium.webdriver.common.touch_action import TouchAction
-from selenium.common.exceptions import NoSuchElementException, ElementNotVisibleException, ElementNotSelectableException
 from selenium.webdriver.support.wait import WebDriverWait
 
 from driver.driver_object import DriverObject
@@ -19,9 +18,7 @@ class MobileElement:
         return self.driver.find_element(self.locator_type, self.locator_name)
 
     def wait_for_element(self, seconds=30):
-        wait = WebDriverWait(self.driver, seconds, poll_frequency=1,
-                             ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,
-                                                 NoSuchElementException])
+        wait = WebDriverWait(self.driver, seconds)
         log("Waiting for {0}.".format(self.element_name))
         element = wait.until(lambda x: x.find_element(self.locator_type, self.locator_name))
         return element
